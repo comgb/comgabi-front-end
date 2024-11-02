@@ -1,9 +1,15 @@
-import Main from "./Main";
+import { Route, Routes } from "react-router-dom";
+import CategoryMenu from "./CategoryMenu";
+import HeaderMenuBar from "./HeaderMenuBar";
 
 function App() {
   return (
     <>
-    <Main />
+      <HeaderMenuBar />
+      <CategoryMenu />
+      <Routes>
+        {/* <Route path="/main" element={<h1>메인</h1>} /> */}
+      </Routes>
     </>
   );
 }
