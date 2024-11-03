@@ -1,0 +1,96 @@
+/* 전체 컨테이너 */
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+}
+
+/* 각 필터 그룹 */
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-group h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+
+/* 필터 옵션을 가로로 정렬 */
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-options label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+}
+
+.filter-options input[type="checkbox"] {
+  accent-color: #4caf50; /* 체크박스 색상 */
+  transform: scale(1.2);
+}
+
+/* 슬라이더 컨테이너 */
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.slider-container span {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Range 슬라이더 스타일 */
+.slider-container .react-range__track {
+  height: 6px;
+  background: #ddd;
+  border-radius: 3px;
+  position: relative;
+  width: 100%;
+}
+
+.slider-container .react-range__thumb {
+  height: 16px;
+  width: 16px;
+  background-color: #4caf50;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+
+/* 검색 버튼 */
+.search-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #45a049;
+}
