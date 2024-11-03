@@ -1,10 +1,12 @@
 import React from 'react'
 import News from './News';
+import Recommend from './Recommend';
 
 function MainPage() {
     return (
         <>
-        <News />
+            <News />
+            <Recommend />
         </>
     )
 }
