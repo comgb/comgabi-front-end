@@ -17,19 +17,27 @@ function HeaderMenuBar() {
 
     return (
         <>
-            <header className='flex items-center justify-center h-14 bg-gray-300'>
-                {/* <Link to="/main"> */}
-                <img
-                    src="img/comgabi-logo.png"
-                    alt="logo-img"
-                    className='h-8'
-                />
-                {/* </Link> */}
-                <form action="#" className='ml-5 justify-center ' style={{ width: '40%' }}>
+            <header className='flex items-center justify-between h-14 bg-gray-300'>
+                <div className='w-16'></div>
+                <Link to="/">
+                    {!isMobile ?
+                        <img
+                            src="img/comgabi-logo.png"
+                            alt="logo-img"
+                            className='w-32 mr-5'
+                        /> :
+                        <img
+                            src="img/comgabi-icon.png"
+                            alt="logo-img"
+                            className='w-10 ml-auto mr-5'
+                        />
+                    }
+                </Link>
+                <form action="#" className='ml-auto justify-center flex-grow' style={{ width: '50%' }}>
                     <input
                         type="text"
-                        placeholder="  검색어를 입력해 주세요."
-                        className='p-1 text-base'
+                        placeholder="검색어를 입력해 주세요."
+                        className='p-1 pl-2 text-base'
                         style={{ width: '90%', borderBottomLeftRadius: '50px', borderTopLeftRadius: '50px' }}
                     />
                     <button
@@ -38,6 +46,18 @@ function HeaderMenuBar() {
                         style={{ width: '10%', borderBottomRightRadius: '50px', borderTopRightRadius: '50px', height: '32px', fontSize: '16px' }}
                     >{!isMobile ? "검색" : <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>search</span>}</button>
                 </form>
+                <div className='ml-5 mr-5 flex'>
+                    <Link to='/shopping-cart'>
+                        <span className="material-symbols-outlined">
+                            shopping_cart
+                        </span>
+                    </Link>
+                    <p className='ml-5 whitespace-nowrap text-gray-700'>
+                        <Link to="/login" className='underline hover:text-gray-900'>로그인</Link>
+                        ⎟
+                        <Link to="/sign-up" className='underline hover:text-gray-900'>회원가입</Link>
+                    </p>
+                </div>
             </header>
         </>
     )

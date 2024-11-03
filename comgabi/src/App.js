@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import CategoryMenu from "./CategoryMenu";
 import HeaderMenuBar from "./HeaderMenuBar";
+import MainPage from "./MainPage";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <HeaderMenuBar />
       <CategoryMenu />
       <Routes>
-        {/* <Route path="/main" element={<h1>메인</h1>} /> */}
+        <Route path="/" element={<MainPage />} />
       </Routes>
     </>
   );
