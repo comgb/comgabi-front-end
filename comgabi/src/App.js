@@ -2,15 +2,17 @@ import { Route, Routes } from "react-router-dom";
 import CategoryMenu from "./CategoryMenu";
 import HeaderMenuBar from "./HeaderMenuBar";
 import MainPage from "./MainPage";
+import ProductListPage from "./ProductListPage";
 
 function App() {
   return (
     <>
       <HeaderMenuBar />
       <CategoryMenu />
-      <Routes>
+      <ProductListPage />
+      {/* <Routes>
         <Route path="/" element={<MainPage />} />
-      </Routes>
+      </Routes> */}
     </>
   );
 }
