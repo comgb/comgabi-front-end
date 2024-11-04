@@ -28,6 +28,43 @@ function ProductListPage() {
             {/* 추가 상품 리스트가 여기에 들어갈 수 있습니다 */}
           </div>
         </section>
+
+        <table class="min-w-full bg-white rounded shadow border border-gray-300">
+          <thead>
+            <tr>
+              <th
+                rowspan="2"
+                class="py-2 px-4 border border-gray-300 text-center"
+              >
+                이미지
+              </th>
+              <th
+                rowspan="2"
+                class="py-2 px-4 border border-gray-300 text-center"
+              >
+                상품명
+              </th>
+              <th
+                colspan="2"
+                class="py-2 px-4 border border-gray-300 text-center"
+              >
+                판매처
+              </th>
+              <th
+                rowspan="2"
+                class="py-2 px-4 border border-gray-300 text-center"
+              >
+                가격
+              </th>
+            </tr>
+            <tr>
+              <th class="py-2 px-4 border border-gray-300 text-center">
+                판매처 개수
+              </th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
       </main>
     </div>
   );
