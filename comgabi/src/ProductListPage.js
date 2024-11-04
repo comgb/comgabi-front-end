@@ -1,52 +1,33 @@
 import React from "react";
-import "./ProductListPage.css";
 import ProductFilter from "./ProductFilter";
 
 function ProductListPage() {
   return (
-    <div className="container">
-      {/* Header */}
-      <header className="header">
-        <button className="logo">로고</button>
-        <input type="text" placeholder="검색창" className="search-bar" />
-        <button className="search-btn">검색</button>
-        <button className="cart-btn">장바구니</button>
-        <button className="login-btn">login</button>
-      </header>
-
-      {/* Sidebar */}
-      <aside className="sidebar">
-        <p>
-          카테고리
-          {/* 이건 가져오기 */}
-        </p>
-      </aside>
-
+    <div className="container mx-auto p-5">
       {/* Main Content */}
-      <main className="main-content">
-        <section className="filter-section">
-          {/* 필터링 부분은 제외하고 레이아웃만 */}
-          <div className="filter-box">🔍 상세 검색 (필터링)</div>
+      <main className="flex flex-col gap-5">
+        {/* 상세 검색 필터 섹션 */}
+        <section className="bg-gray-100 p-4 rounded shadow text-center text-lg font-semibold text-gray-700">
+          🔍 상세 검색 (필터링)
         </section>
-        <section className="filtering">
+
+        {/* 필터링 컴포넌트 */}
+        <section>
           <ProductFilter />
         </section>
-        <section className="product-section">
-          <div className="product-table">
-            <div className="product-item">
+
+        {/* 상품 리스트 섹션 */}
+        <section className="p-5 bg-gray-200 rounded shadow">
+          <div className="flex flex-col gap-2">
+            <div className="flex justify-between p-4 bg-white rounded shadow text-gray-800 font-medium">
               <span>상품 사진</span>
               <span>제품명</span>
               <span>제품 가격(최저가)</span>
             </div>
-            {/* 상품 리스트는 여기 추가 가능 */}
+            {/* 추가 상품 리스트가 여기에 들어갈 수 있습니다 */}
           </div>
         </section>
       </main>
-
-      {/* Footer */}
-      <footer className="footer">
-        <p>사업자 정보 // 고객센터</p>
-      </footer>
     </div>
   );
 }

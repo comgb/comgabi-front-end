@@ -1,7 +1,15 @@
-// Filter.js
+// ProductFilter.js
 import React, { useState } from "react";
-import "./ProductFilter.css";
 import { Range } from "react-range";
+
+const filterOptions = {
+  제조사별: ["MSI", "ASUS", "레노버", "에이서", "HP"],
+  화면크기대: ["18인치 이상", "17인치대", "16인치대", "15인치대", "14인치대"],
+  CPU종류: ["라이젠 9 HX", "코어 울트라7", "코어9-14세대", "코어7-14세대"],
+  램용량: ["128GB", "64GB", "32GB", "16GB"],
+  운영체제: ["미포함(프리도스)", "윈도우11(설치)", "윈도우10(설치)"],
+  무게: ["1.4~1.7kg", "1.7~2.0kg", "2.0~2.3kg", "2.3~2.5kg", "2.5~2.8kg"],
+};
 
 function ProductFilter() {
   const [filters, setFilters] = useState({
@@ -36,272 +44,64 @@ function ProductFilter() {
   };
 
   return (
-    <div className="filter-container">
-      <div className="filter-group">
-        <h4>제조사별</h4>
-        <div className="filter-options">
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("제조사별", "MSI")}
-            />{" "}
-            MSI
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("제조사별", "ASUS")}
-            />{" "}
-            ASUS
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("제조사별", "레노버")}
-            />{" "}
-            레노버
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("제조사별", "에이서")}
-            />{" "}
-            에이서
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("제조사별", "HP")}
-            />{" "}
-            HP
-          </label>
-        </div>
-      </div>
-
-      <div className="filter-group">
-        <h4>화면 크기대</h4>
-        <div className="filter-options">
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("화면크기대", "18인치 이상")}
-            />{" "}
-            18인치 이상
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("화면크기대", "17인치대")}
-            />{" "}
-            17인치대
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("화면크기대", "16인치대")}
-            />{" "}
-            16인치대
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("화면크기대", "15인치대")}
-            />{" "}
-            15인치대
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("화면크기대", "14인치대")}
-            />{" "}
-            14인치대
-          </label>
-        </div>
-      </div>
-
-      <div className="filter-group">
-        <h4>CPU 종류</h4>
-        <div className="filter-options">
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("CPU종류", "라이젠 9 HX")}
-            />{" "}
-            라이젠 9 HX
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("CPU종류", "코어 울트라7")}
-            />{" "}
-            코어 울트라7
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("CPU종류", "코어9-14세대")}
-            />{" "}
-            코어9-14세대
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("CPU종류", "코어7-14세대")}
-            />{" "}
-            코어7-14세대
-          </label>
-        </div>
-      </div>
-
-      <div className="filter-group">
-        <h4>램 용량</h4>
-        <div className="filter-options">
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("램용량", "128GB")}
-            />{" "}
-            128GB
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("램용량", "64GB")}
-            />{" "}
-            64GB
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("램용량", "32GB")}
-            />{" "}
-            32GB
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("램용량", "16GB")}
-            />{" "}
-            16GB
-          </label>
-        </div>
-      </div>
-
-      <div className="filter-group">
-        <h4>운영체제(OS)</h4>
-        <div className="filter-options">
-          <label>
-            <input
-              type="checkbox"
-              onChange={() =>
-                handleCheckboxChange("운영체제", "미포함(프리도스)")
-              }
-            />{" "}
-            미포함(프리도스)
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              onChange={() =>
-                handleCheckboxChange("운영체제", "윈도우11(설치)")
-              }
-            />{" "}
-            윈도우11(설치)
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              onChange={() =>
-                handleCheckboxChange("운영체제", "윈도우10(설치)")
-              }
-            />{" "}
-            윈도우10(설치)
-          </label>
-        </div>
-      </div>
-
-      <div className="filter-group">
-        <h4>무게</h4>
-        <div className="filter-options">
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("무게", "1.4~1.7kg")}
-            />{" "}
-            1.4~1.7kg
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("무게", "1.7~2.0kg")}
-            />{" "}
-            1.7~2.0kg
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("무게", "2.0~2.3kg")}
-            />{" "}
-            2.0~2.3kg
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("무게", "2.3~2.5kg")}
-            />{" "}
-            2.3~2.5kg
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange("무게", "2.5~2.8kg")}
-            />{" "}
-            2.5~2.8kg
-          </label>
-        </div>
-      </div>
-
-      <div className="filter-group">
-        <h4>가격대</h4>
-        <div className="slider-container">
-          <span>최소 가격: {filters.가격대[0]}만원</span>
-          <span>최대 가격: {filters.가격대[1]}만원</span>
-          <Range
-            step={50}
-            min={0}
-            max={5000}
-            values={filters.가격대} // 배열 형태로 전달
-            onChange={handlePriceChange}
-            renderTrack={({ props, children }) => (
-              <div
-                {...props}
-                style={{
-                  ...props.style,
-                  height: "6px",
-                  background: "#ccc",
-                  width: "100%",
-                }}
+    <div className="w-full max-w-2xl mx-auto p-4 border border-gray-300 rounded-lg bg-gray-50">
+      {/* 필터 그룹을 동적으로 렌더링 */}
+      {Object.keys(filterOptions).map((category) => (
+        <div key={category} className="flex flex-col gap-1">
+          <h4 className="text-md font-bold text-gray-800 mb-1">{category}</h4>
+          <div className="flex flex-wrap gap-2">
+            {filterOptions[category].map((option) => (
+              <label
+                key={option}
+                className="flex items-center gap-2 text-xs text-gray-600 cursor-pointer"
               >
-                {children}
-              </div>
-            )}
-            renderThumb={({ props }) => (
-              <div
-                {...props}
-                style={{
-                  ...props.style,
-                  height: "16px",
-                  width: "16px",
-                  backgroundColor: "#999",
-                  borderRadius: "50%",
-                }}
-              />
-            )}
-          />
+                <input
+                  type="checkbox"
+                  checked={filters[category].includes(option)}
+                  onChange={() => handleCheckboxChange(category, option)}
+                  className="form-checkbox h-4 w-4 text-green-500"
+                />
+                {option}
+              </label>
+            ))}
+          </div>
         </div>
+      ))}
+
+      {/* 가격대 슬라이더 */}
+      <div className="flex flex-col gap-1 mt-4">
+        <h4 className="text-md font-bold text-gray-800">가격대</h4>
+        <div className="flex flex-col gap-1">
+          <span className="text-xs text-gray-600">
+            최소 가격: {filters.가격대[0]}만원
+          </span>
+          <span className="text-xs text-gray-600">
+            최대 가격: {filters.가격대[1]}만원
+          </span>
+        </div>
+        <Range
+          step={50}
+          min={0}
+          max={5000}
+          values={filters.가격대}
+          onChange={handlePriceChange}
+          renderTrack={({ props, children }) => (
+            <div {...props} className="w-full h-1 bg-gray-300 rounded">
+              {children}
+            </div>
+          )}
+          renderThumb={({ props }) => (
+            <div
+              {...props}
+              className="h-3 w-3 bg-green-500 rounded-full shadow-md"
+            />
+          )}
+        />
       </div>
 
-      <button className="search-button">검색</button>
+      <button className="mt-4 py-1 px-3 text-white bg-green-500 rounded hover:bg-green-600 transition-colors duration-300 text-sm">
+        검색
+      </button>
     </div>
   );
 }
