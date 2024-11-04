@@ -38,12 +38,18 @@ function HeaderMenuBar() {
                         type="text"
                         placeholder="검색어를 입력해 주세요."
                         className='p-1 pl-2 text-base'
-                        style={{ width: '90%', borderBottomLeftRadius: '50px', borderTopLeftRadius: '50px' }}
+                        style={{ width: !isMobile ? '90%' : '85%', borderBottomLeftRadius: '50px', borderTopLeftRadius: '50px' }}
                     />
                     <button
                         type="submit"
                         className='p-1 bg-blue-500 text-white active:bg-blue-700 cursor-pointer whitespace-nowrap'
-                        style={{ width: '10%', borderBottomRightRadius: '50px', borderTopRightRadius: '50px', height: '32px', fontSize: '16px' }}
+                        style={{
+                            width: !isMobile ? '10%' : '15%',
+                            borderBottomRightRadius: '50px',
+                            borderTopRightRadius: '50px',
+                            height: '32px',
+                            fontSize: '16px'
+                        }}
                     >{!isMobile ? "검색" : <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>search</span>}</button>
                 </form>
                 <div className='ml-5 mr-5 flex'>
@@ -52,10 +58,20 @@ function HeaderMenuBar() {
                             shopping_cart
                         </span>
                     </Link>
-                    <p className='ml-5 whitespace-nowrap text-gray-700'>
-                        <Link to="/login" className='underline hover:text-gray-900'>로그인</Link>
-                        ⎟
-                        <Link to="/sign-up" className='underline hover:text-gray-900'>회원가입</Link>
+                    <p className='ml-5 text-gray-700'>
+                        {!isMobile ?
+                            <div className='whitespace-nowrap'>
+                                <Link to="/login" className='underline hover:text-gray-900 '>로그인</Link>
+                                ⎟
+                                <Link to="/sign-up" className='underline hover:text-gray-900'>회원가입</Link>
+                            </div>
+                            :
+                            <>
+                                <span class="material-symbols-outlined">
+                                    login
+                                </span>
+                            </>
+                        }
                     </p>
                 </div>
             </header>
