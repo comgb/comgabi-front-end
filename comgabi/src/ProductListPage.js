@@ -17,12 +17,13 @@ function ProductListPage() {
         </section>
 
         {/* 상품 리스트 섹션 */}
-        <section className="p-5 bg-gray-200 rounded shadow">
-          <div className="flex flex-col gap-2">
+        <section className="p-5 bg-gray-200 rounded shadow w-full max-w-6xl mx-auto">
+          <div className="flex flex-col gap-3">
             <div className="flex justify-between p-4 bg-white rounded shadow text-gray-800 font-medium">
-              <span>상품 사진</span>
-              <span>제품명</span>
-              <span>제품 가격(최저가)</span>
+              <span className="flex-1 text-left">상품 사진</span>
+              <span className="flex-1 text-center">제품명</span>
+              <span className="flex-1 text-center">판매처 개수</span>
+              <span className="flex-1 text-right">제품 가격(최저가)</span>
             </div>
             {/* 추가 상품 리스트가 여기에 들어갈 수 있습니다 */}
           </div>
