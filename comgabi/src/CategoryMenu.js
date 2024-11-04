@@ -15,9 +15,12 @@ const CategoryMenu = () => {
                     onClick={toggleMenu}
                     className="fixed top-4 left-5 focus:outline-none z-50"
                 >
-                    <span className="material-symbols-outlined icon">
-                        {isOpen ? 'close' : 'menu'}
-                    </span>
+                    {
+                        isOpen ?
+                            <span className="material-symbols-outlined icon text-white">close</span>
+                            :
+                            <span className="material-symbols-outlined icon">menu</span>
+                    }
                 </button>
 
                 <div className={`bg-blue-500 text-white fixed inset-y-0 left-0 transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 z-40 w-64`}>
@@ -36,8 +39,8 @@ const CategoryMenu = () => {
                         </Link>
                     </nav>
                 </div>
-            </div>
-        </aside>
+            </div >
+        </aside >
     );
 };
 
