@@ -17,7 +17,7 @@ function HeaderMenuBar() {
 
     return (
         <>
-            <header className='flex items-center justify-between h-14 bg-gray-300'>
+            <header className='sticky top-0 z-50 flex items-center justify-between h-14 bg-gray-300'>
                 <div className='w-16'></div>
                 <Link to="/">
                     {!isMobile ?
@@ -54,16 +54,16 @@ function HeaderMenuBar() {
                         {!isMobile ? "검색" : <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>search</span>}
                     </button>
                 </form>
-                <div className='ml-5 mr-5 flex'>
-                    <Link to='/shopping-cart'>
+                <div className='ml-5 mr-5 flex items-center'>
+                    <Link to='/shopping-cart' className='flex items-center'>
                         <span className="material-symbols-outlined">
                             shopping_cart
                         </span>
                     </Link>
-                    <p className='ml-5 text-gray-700'>
+                    <p className='ml-5 text-gray-700 flex items-center'>
                         {!isMobile ?
                             <div className='whitespace-nowrap'>
-                                <Link to="/login" className='underline hover:text-gray-900 '>로그인</Link>
+                                <Link to="/login" className='underline hover:text-gray-900'>로그인</Link>
                                 ⎟
                                 <Link to="/sign-up" className='underline hover:text-gray-900'>회원가입</Link>
                             </div>
