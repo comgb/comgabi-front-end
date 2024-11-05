@@ -33,7 +33,7 @@ function HeaderMenuBar() {
                         />
                     }
                 </Link>
-                <form action="#" className='ml-auto justify-center flex-grow' style={{ width: '50%' }}>
+                <form action="#" className='ml-auto justify-center flex-grow flex items-center' style={{ width: '50%' }}>
                     <input
                         type="text"
                         placeholder="검색어를 입력해 주세요."
@@ -42,7 +42,7 @@ function HeaderMenuBar() {
                     />
                     <button
                         type="submit"
-                        className='p-1 bg-blue-500 text-white active:bg-blue-700 cursor-pointer whitespace-nowrap'
+                        className='p-1 bg-blue-500 text-white active:bg-blue-700 cursor-pointer whitespace-nowrap flex items-center justify-center'
                         style={{
                             width: !isMobile ? '10%' : '15%',
                             borderBottomRightRadius: '50px',
@@ -50,7 +50,9 @@ function HeaderMenuBar() {
                             height: '32px',
                             fontSize: '16px'
                         }}
-                    >{!isMobile ? "검색" : <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>search</span>}</button>
+                    >
+                        {!isMobile ? "검색" : <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>search</span>}
+                    </button>
                 </form>
                 <div className='ml-5 mr-5 flex'>
                     <Link to='/shopping-cart'>
