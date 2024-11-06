@@ -12,7 +12,6 @@ function App() {
     <>
       <HeaderMenuBar />
       <CategoryMenu />
-      {/* <ProductListPage /> */}
       <Routes>
         <Route path="/productList" element={<ProductListPage />} />
         <Route path="/" element={<MainPage />} />
