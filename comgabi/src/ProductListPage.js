@@ -1,5 +1,6 @@
 import React from "react";
 import ProductFilter from "./ProductFilter";
+import { Link } from "react-router-dom";
 
 function ProductListPage() {
   return (
@@ -29,40 +30,50 @@ function ProductListPage() {
           </div>
         </section>
 
-        <table class="min-w-full bg-white rounded shadow border border-gray-300">
+        <table className="min-w-full bg-white rounded shadow border border-gray-300">
           <thead>
             <tr>
               <th
-                rowspan="2"
-                class="py-2 px-4 border border-gray-300 text-center"
+                rowSpan="2"
+                className="w-40 h-28 p-0 border border-gray-300 text-center"
               >
-                이미지
+                <Link
+                  to="/productList/ProductDetailsPage/productName"
+                  className="text-blue-500 underline"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/ee254f_8e27e4c88ec34d8a945524c557c66863~mv2.jpg/v1/fill/w_480,h_388,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ee254f_8e27e4c88ec34d8a945524c557c66863~mv2.jpg"
+                    alt="Product Image"
+                    className="w-36 h-28 object-cover"
+                  />
+                </Link>
               </th>
               <th
-                rowspan="2"
-                class="py-2 px-4 border border-gray-300 text-center"
+                rowSpan="2"
+                className="w-90 py-2 px-1 border border-gray-300 text-center"
               >
-                상품명
+                <Link
+                  to="/productList/ProductDetailsPage/productName"
+                  className="text-blue-500 underline"
+                >
+                  Legion 7i (16", Gen 9)
+                </Link>
               </th>
               <th
-                colspan="2"
-                class="py-2 px-4 border border-gray-300 text-center"
+                colSpan="2"
+                className="w-10 h-10 py-2 px-2 border border-gray-300 text-center"
               >
                 판매처
               </th>
               <th
-                rowspan="2"
-                class="py-2 px-4 border border-gray-300 text-center"
+                rowSpan="2"
+                className="py-2 px-4 border border-gray-300 text-center"
               >
                 가격
               </th>
             </tr>
-            <tr>
-              <th class="py-2 px-4 border border-gray-300 text-center">
-                판매처 개수
-              </th>
-            </tr>
           </thead>
+
           <tbody></tbody>
         </table>
       </main>
