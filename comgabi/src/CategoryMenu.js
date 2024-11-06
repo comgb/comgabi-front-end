@@ -17,7 +17,7 @@ const CategoryMenu = () => {
                 >
                     {
                         isOpen ?
-                            <span className="material-symbols-outlined icon text-white">close</span>
+                            <span className="material-symbols-outlined icon">close</span>
                             :
                             <span className="material-symbols-outlined icon">menu</span>
                     }
