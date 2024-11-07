@@ -20,8 +20,11 @@ const News = () => {
                       src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/4c92/live/331f42f0-9bd9-11ef-9260-19e6a950e830.png.webp"
                       alt="News_Photo"
                     />
-                    <div className="font-bold w-full max-md:w-auto text-xl">
-                      2024 미국 대선 개표 현황
+                    <div className="w-full max-md:w-auto">
+                      <div className="font-bold text-xl">
+                        2024 미국 대선 개표 현황
+                      </div>
+                      <div className="text-base opacity-50">1일전</div>
                     </div>
                     <div className="font-bold w-40 text-xl">BBC</div>
                   </Link>
@@ -31,15 +34,18 @@ const News = () => {
                 <td className="border-b-2">
                   <Link
                     to="https://www.bbc.com/korean/articles/cwy9k9zz807o"
-                    className="flex items-center gap-4"
+                    className="flex items-center gap-4 hover"
                   >
                     <img
                       className="aspect-square w-20"
                       src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/4c92/live/331f42f0-9bd9-11ef-9260-19e6a950e830.png.webp"
                       alt="News_Photo"
                     />
-                    <div className="font-bold w-full max-md:w-auto text-xl">
-                      2024 미국 대선 개표 현황
+                    <div className="w-full max-md:w-auto">
+                      <div className="font-bold text-xl">
+                        2024 미국 대선 개표 현황
+                      </div>
+                      <div className="text-base opacity-50">1일전</div>
                     </div>
                     <div className="font-bold w-40 text-xl">BBC</div>
                   </Link>
@@ -49,15 +55,18 @@ const News = () => {
                 <td className="border-b-2">
                   <Link
                     to="https://www.bbc.com/korean/articles/cwy9k9zz807o"
-                    className="flex items-center gap-4"
+                    className="flex items-center gap-4 hover"
                   >
                     <img
                       className="aspect-square w-20"
                       src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/4c92/live/331f42f0-9bd9-11ef-9260-19e6a950e830.png.webp"
                       alt="News_Photo"
                     />
-                    <div className="font-bold w-full max-md:w-auto text-xl">
-                      2024 미국 대선 개표 현황
+                    <div className="w-full max-md:w-auto">
+                      <div className="font-bold text-xl">
+                        2024 미국 대선 개표 현황
+                      </div>
+                      <div className="text-base opacity-50">1일전</div>
                     </div>
                     <div className="font-bold w-40 text-xl">BBC</div>
                   </Link>
@@ -67,15 +76,18 @@ const News = () => {
                 <td>
                   <Link
                     to="https://www.bbc.com/korean/articles/cwy9k9zz807o"
-                    className="flex items-center gap-4"
+                    className="flex items-center gap-4 hover"
                   >
                     <img
                       className="aspect-square w-20"
                       src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/4c92/live/331f42f0-9bd9-11ef-9260-19e6a950e830.png.webp"
                       alt="News_Photo"
                     />
-                    <div className="font-bold w-full max-md:w-auto text-xl">
-                      2024 미국 대선 개표 현황
+                    <div className="w-full max-md:w-auto">
+                      <div className="font-bold text-xl">
+                        2024 미국 대선 개표 현황
+                      </div>
+                      <div className="text-base opacity-50">1일전</div>
                     </div>
                     <div className="font-bold w-40 text-xl">BBC</div>
                   </Link>
