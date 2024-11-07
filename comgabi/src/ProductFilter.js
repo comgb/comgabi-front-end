@@ -45,6 +45,8 @@ function ProductFilter() {
 
   return (
     <div className="w-full max-w-2xl mx-auto p-4 border border-gray-300 rounded-lg bg-gray-50">
+      🔍 상세 검색 (필터링)
+      <hr className="w-full h-1 bg-gray-500 border-0" />
       {/* 필터 그룹을 동적으로 렌더링 */}
       {Object.keys(filterOptions).map((category) => (
         <div key={category} className="flex flex-col gap-1">
@@ -67,7 +69,6 @@ function ProductFilter() {
           </div>
         </div>
       ))}
-
       {/* 가격대 슬라이더 */}
       <div className="flex flex-col gap-1 mt-4">
         <h4 className="text-md font-bold text-gray-800">가격대</h4>
@@ -98,7 +99,6 @@ function ProductFilter() {
           )}
         />
       </div>
-
       <button className="mt-4 py-1 px-3 text-white bg-green-500 rounded hover:bg-green-600 transition-colors duration-300 text-sm">
         검색
       </button>
