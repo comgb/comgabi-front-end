@@ -4,7 +4,7 @@ import HeaderMenuBar from "./HeaderMenuBar";
 import MainPage from "./MainPage";
 import ProductListPage from "./ProductListPage";
 import CopylightFooter from "./CopylightFooter";
-// import ProductDetailsPage from "./ProductDetailsPage";
+import ProductDetailsPage from "./ProductDetailsPage";
 import TopButton from "./TopButton";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/productList" element={<ProductListPage />} />
         <Route path="/" element={<MainPage />} />
-        {/* <Route path="/product" element={<ProductDetailsPage />} /> */}
+        <Route path="/product" element={<ProductDetailsPage />} />
       </Routes>
       <TopButton />
       <CopylightFooter />
