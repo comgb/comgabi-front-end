@@ -95,7 +95,7 @@ function HeaderMenuBar() {
               </div>
             ) : (
               <>
-                <span class="material-symbols-outlined" onClick={toggleMenu}>
+                <span className="material-symbols-outlined cursor-pointer" onClick={toggleMenu}>
                   login
                 </span>
               </>
