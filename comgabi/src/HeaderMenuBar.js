@@ -4,6 +4,12 @@ import { Link } from "react-router-dom";
 function HeaderMenuBar() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 768px)");
 
@@ -89,10 +95,20 @@ function HeaderMenuBar() {
               </div>
             ) : (
               <>
-                <span class="material-symbols-outlined">login</span>
+                <span className="material-symbols-outlined cursor-pointer" onClick={toggleMenu}>
+                  login
+                </span>
               </>
             )}
           </p>
+        </div>
+        <div
+          className={`flex flex-col p-4 fixed top-14 right-4 z-50 text-white bg-blue-500 ${
+            isOpen ? "visible" : "invisible"
+          }`}
+        >
+          <Link to="/login">로그인</Link>
+          <Link to="/sign-up">회원가입</Link>
         </div>
       </header>
     </>
