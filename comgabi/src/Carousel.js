@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 function Carousel({ images }) {
   const [pageNum, setPageNum] = useState(1);
+  const carouselRef = useRef(null);
+  const isAutoScrolling = useRef(false); // 자동 스크롤 상태 추적
 
   // 다음 페이지로 스크롤
   const nextPage = () => {
     if (pageNum < images.length) {
       const nextPageNum = pageNum + 1;
       setPageNum(nextPageNum);
-      const nextImage = document.getElementById(`img${nextPageNum}`);
-      const carousel = document.querySelector(".carousel");
-      carousel.scrollLeft = nextImage.offsetLeft - carousel.offsetLeft;
+      scrollToImage(nextPageNum);
     }
   };
 
@@ -19,18 +19,34 @@ function Carousel({ images }) {
     if (pageNum > 1) {
       const prevPageNum = pageNum - 1;
       setPageNum(prevPageNum);
-      const prevImage = document.getElementById(`img${prevPageNum}`);
-      const carousel = document.querySelector(".carousel");
-      carousel.scrollLeft = prevImage.offsetLeft - carousel.offsetLeft;
+      scrollToImage(prevPageNum);
     }
   };
 
-  // 수동 스크롤을 감지하고 페이지 번호 업데이트
+  // 특정 이미지로 스크롤 이동
+  const scrollToImage = (page) => {
+    const carousel = carouselRef.current;
+    const targetImage = document.getElementById(`img${page}`);
+    if (carousel && targetImage) {
+      isAutoScrolling.current = true; // 자동 스크롤 중임을 표시
+      carousel.scrollTo({
+        left: targetImage.offsetLeft - carousel.offsetLeft,
+        behavior: "auto", // smooth 대신 auto로 바로 이동
+      });
+      // 스크롤 완료 후 자동 스크롤 상태 해제
+      setTimeout(() => {
+        isAutoScrolling.current = false;
+      }, 100); // 100ms 후 자동 스크롤 해제
+    }
+  };
+
+  // 수동 스크롤을 감지하고 페이지 번호 업데이트 (디바운스 적용)
   const handleScroll = () => {
-    const carousel = document.querySelector(".carousel");
+    if (isAutoScrolling.current) return; // 자동 스크롤 중에는 동작하지 않음
+
+    const carousel = carouselRef.current;
     const images = document.querySelectorAll(".carousel-item");
 
-    // 현재 스크롤 위치에서 가장 가까운 이미지 계산
     let closestIndex = 0;
     let closestDistance = Number.MAX_VALUE;
 
@@ -48,17 +64,22 @@ function Carousel({ images }) {
     }
   };
 
+  // 디바운스 적용하여 스크롤 이벤트 빈도 조절
+  const debounceScroll = () => {
+    if (isAutoScrolling.current) return;
+    clearTimeout(isAutoScrolling.current);
+    isAutoScrolling.current = setTimeout(() => handleScroll(), 100);
+  };
+
   // 스크롤 이벤트 리스너 추가
   useEffect(() => {
-    const carousel = document.querySelector(".carousel");
+    const carousel = carouselRef.current;
     if (carousel) {
-      carousel.addEventListener("scroll", handleScroll);
+      carousel.addEventListener("scroll", debounceScroll);
     }
-
-    // 컴포넌트가 unmount 될 때 이벤트 리스너 제거
     return () => {
       if (carousel) {
-        carousel.removeEventListener("scroll", handleScroll);
+        carousel.removeEventListener("scroll", debounceScroll);
       }
     };
   }, []);
@@ -70,7 +91,10 @@ function Carousel({ images }) {
   return (
     <div className="carousel-container overflow-hidden">
       {/* Carousel 이미지들 */}
-      <div className="carousel carousel-center bg-neutral rounded-box max-w-md space-x-4 p-4 overflow-x-auto">
+      <div
+        ref={carouselRef}
+        className="carousel carousel-center bg-neutral rounded-box max-w-md space-x-4 p-4 overflow-x-auto"
+      >
         {images.map((image, index) => (
           <div className="carousel-item" id={`img${index + 1}`} key={index}>
             <img
@@ -88,7 +112,7 @@ function Carousel({ images }) {
           className="btn rounded-full"
           disabled={isFirstPage}
         >
-          <span class="material-symbols-outlined">keyboard_arrow_left</span>
+          <span className="material-symbols-outlined">keyboard_arrow_left</span>
         </button>
         <p className="items-center text-xl m-3">{pageNum}</p>
         <button
@@ -96,7 +120,9 @@ function Carousel({ images }) {
           className="btn rounded-full"
           disabled={isLastPage}
         >
-          <span class="material-symbols-outlined">keyboard_arrow_right</span>
+          <span className="material-symbols-outlined">
+            keyboard_arrow_right
+          </span>
         </button>
       </div>
     </div>

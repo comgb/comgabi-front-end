@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/productList" element={<ProductListPage />} />
         <Route path="/" element={<MainPage />} />
-        <Route path="/product" element={<ProductDetailsPage />} />
+        <Route path="/ProductDetailsPage" element={<ProductDetailsPage />} />
       </Routes>
       <TopButton />
       <CopylightFooter />
