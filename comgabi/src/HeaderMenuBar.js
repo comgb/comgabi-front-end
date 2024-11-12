@@ -23,7 +23,7 @@ function HeaderMenuBar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 flex items-center justify-between h-14 bg-gray-300">
+      <header className="sticky top-0 z-50 flex items-center justify-between h-14 bg-base-300">
         <div className="w-16"></div>
         <Link to="/">
           {!isMobile ? (
@@ -57,7 +57,7 @@ function HeaderMenuBar() {
           />
           <button
             type="submit"
-            className="p-1 bg-blue-500 text-white active:bg-blue-700 cursor-pointer whitespace-nowrap flex items-center justify-center"
+            className="p-1 bg-primary text-primary-content active:bg-blue-700 cursor-pointer whitespace-nowrap flex items-center justify-center"
             style={{
               width: !isMobile ? "10%" : "15%",
               borderBottomRightRadius: "50px",
@@ -80,9 +80,11 @@ function HeaderMenuBar() {
         </form>
         <div className="ml-5 mr-5 flex items-center">
           <Link to="/shopping-cart" className="flex items-center">
-            <span className="material-symbols-outlined">shopping_cart</span>
+            <span className="material-symbols-outlined text-base-content">
+              shopping_cart
+            </span>
           </Link>
-          <p className="ml-5 text-gray-700 flex items-center">
+          <p className="ml-5 text-base-content flex items-center">
             {!isMobile ? (
               <div className="whitespace-nowrap">
                 <Link to="/login" className="underline hover:text-gray-900">
@@ -95,7 +97,7 @@ function HeaderMenuBar() {
               </div>
             ) : (
               <>
-                <span className="material-symbols-outlined cursor-pointer" onClick={toggleMenu}>
+                <span class="material-symbols-outlined" onClick={toggleMenu}>
                   login
                 </span>
               </>
@@ -103,7 +105,7 @@ function HeaderMenuBar() {
           </p>
         </div>
         <div
-          className={`flex flex-col p-4 fixed top-14 right-4 z-50 text-white bg-blue-500 ${
+          className={`flex flex-col p-4 fixed top-14 right-4 z-50 text-primary-content bg-primary ${
             isOpen ? "visible" : "invisible"
           }`}
         >
