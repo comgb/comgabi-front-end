@@ -38,9 +38,36 @@ function LoginPage() {
         </svg>
         <input type="password" className="grow" placeholder="password" />
       </label>
-      <button className="btn btn-primary text-white p-4 w-96 place-self-center">
+      <button className="btn btn-primary p-4 w-96 place-self-center">
         로그인
       </button>
+      <div className="flex self-center">
+        <div className="text-gray-400 mt-4 border-r border-gray-400 px-2">
+          아이디 찾기
+        </div>
+        <div className="text-gray-400 mt-4 border-r border-gray-400 px-2">
+          비밀번호 찾기
+        </div>
+        <div className="text-gray-400 mt-4 px-2">회원가입</div>
+      </div>
+      <div class="flex self-center items-center my-4 w-96">
+        <div class="flex-grow border-t border-gray-300" />
+        <span class="mx-4 text-gray-500">or</span>
+        <hr class="flex-grow border-t border-gray-300" />
+      </div>
+      <div className="flex gap-4 w-56 self-center">
+        <img
+          className="aspect-square w-16"
+          src="img/web_neutral_rd_na@3x.png"
+          alt="google"
+        />
+        <img
+          className="aspect-square w-16"
+          src="img/btnG_아이콘원형.png"
+          alt="naver"
+        />
+        <img className="aspect-square w-16" src="img/i_kakao.png" alt="naver" />
+      </div>
     </div>
   );
 }
