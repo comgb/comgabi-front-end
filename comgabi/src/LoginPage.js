@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function LoginPage() {
+  const [showToast, setShowToast] = useState(false);
+
+  const handleFindId = () => {
+    setShowToast(true);
+  };
+
   return (
     <div className="flex flex-col">
       <Link to="/">
@@ -42,13 +48,21 @@ function LoginPage() {
         로그인
       </button>
       <div className="flex self-center">
-        <div className="text-gray-400 mt-4 border-r border-gray-400 px-2">
+        <div
+          className="text-gray-400 mt-4 border-r border-gray-400 px-2 cursor-pointer"
+          onClick={handleFindId}
+        >
           아이디 찾기
         </div>
-        <div className="text-gray-400 mt-4 border-r border-gray-400 px-2">
+        <div
+          className="text-gray-400 mt-4 border-r border-gray-400 px-2 cursor-pointer"
+          onClick={handleFindId}
+        >
           비밀번호 찾기
         </div>
-        <div className="text-gray-400 mt-4 px-2">회원가입</div>
+        <Link to="/signUp" className="text-gray-400 mt-4 px-2">
+          회원가입
+        </Link>
       </div>
       <div class="flex self-center items-center my-4 w-96">
         <div class="flex-grow border-t border-gray-300" />
@@ -68,6 +82,71 @@ function LoginPage() {
         />
         <img className="aspect-square w-16" src="img/i_kakao.png" alt="naver" />
       </div>
+
+      {showToast && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg w-[600px] p-6">
+            <div className="flex justify-between items-center mb-6">
+              <h3 className="text-lg font-medium">전화번호로 찾기</h3>
+              <button
+                onClick={() => setShowToast(false)}
+                className="text-gray-500 hover:text-gray-700 text-2xl"
+              >
+                ×
+              </button>
+            </div>
+            <div className="space-y-4">
+              <div>
+                <span>전화번호</span>
+                <div className="flex justify-s gap-1 mb-2">
+                  <input
+                    type="text"
+                    className="w-full p-2 border rounded bg-gray-100"
+                  />
+                  <button className="w-32 btn btn-primary px-3 py-1 rounded text-sm">
+                    인증번호 발송
+                  </button>
+                </div>
+                <span>인증번호</span>
+                <div className="flex justify-s gap-1 mb-2">
+                  <input
+                    type="text"
+                    className="w-full p-2 border rounded bg-gray-100"
+                  />
+                  <button className="btn w-32 btn-primary px-3 py-1 rounded text-sm">
+                    인증
+                  </button>
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between mb-2">
+                  <span>이메일로 찾기</span>
+                </div>
+                <span>이메일</span>
+                <div className="flex justify-s gap-1 mb-2">
+                  <input
+                    type="text"
+                    className="w-full p-2 border rounded bg-gray-100"
+                  />
+                  <button className="w-32 btn btn-primary px-3 py-1 rounded text-sm">
+                    인증번호 발송
+                  </button>
+                </div>
+                <span>인증번호</span>
+                <div className="flex justify-s gap-1 mb-2">
+                  <input
+                    type="text"
+                    className="w-full p-2 border rounded bg-gray-100"
+                  />
+                  <button className="btn w-32 btn-primary px-3 py-1 rounded text-sm">
+                    인증
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
