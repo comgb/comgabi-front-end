@@ -110,7 +110,7 @@ function HeaderMenuBar() {
           }`}
         >
           <Link to="/login">로그인</Link>
-          <Link to="/sign-up">회원가입</Link>
+          <Link to="/signUp">회원가입</Link>
         </div>
       </header>
     </>
