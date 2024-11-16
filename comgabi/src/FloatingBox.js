@@ -22,7 +22,7 @@ function FloatingBox() {
       </div>
 
       {/* Description Box */}
-      <div className="bg-white p-4 rounded-lg shadow-inner text-gray-800 mb-4 text-sm">
+      <div className="bg-white p-4 rounded-lg shadow-inner border-2 border-gray-300 text-gray-800 mb-4 text-sm">
         <p>
           ✔️ 적합성: 가정용으로 충분히 적합합니다. 램 8GB와 SSD 500GB는 일상적인
           웹서핑, 영상 시청, 가벼운 소프트웨어 실행 등 기본적인 작업에 충분한
@@ -38,7 +38,7 @@ function FloatingBox() {
       </div>
 
       {/* Recommendation Box */}
-      <div className="bg-white p-4 rounded-lg border-dashed border-2 border-gray-300 text-gray-800 text-sm">
+      <div className="bg-white p-4 rounded-lg border-2 border-gray-300 text-gray-800 text-sm">
         <p className="font-semibold">추천</p>
         <p>
           이 컴퓨터는 1,000,000원의 가격으로 가정용과 업무용, 그리고 중간 수준의
