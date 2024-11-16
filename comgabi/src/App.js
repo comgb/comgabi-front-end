@@ -7,6 +7,7 @@ import CopylightFooter from "./CopylightFooter";
 import ProductDetailsPage from "./ProductDetailsPage";
 import TopButton from "./TopButton";
 import LoginPage from "./LoginPage";
+import SignUpPage from "./SignUpPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/product" element={<ProductDetailsPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/signUp" element={<SignUpPage />} />
       </Routes>
       <TopButton />
       <CopylightFooter />
