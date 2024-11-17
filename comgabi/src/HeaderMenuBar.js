@@ -91,7 +91,7 @@ function HeaderMenuBar() {
                   로그인
                 </Link>
                 ⎟
-                <Link to="/sign-up" className="underline hover:text-gray-900">
+                <Link to="/signUp" className="underline hover:text-gray-900">
                   회원가입
                 </Link>
               </div>
