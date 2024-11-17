@@ -8,7 +8,8 @@ import ProductDetailsPage from "./ProductDetailsPage";
 import TopButton from "./TopButton";
 import LoginPage from "./LoginPage";
 import SignUpPage from "./SignUpPage";
-
+import SignUpPhone from "./SignUpPhone";
+import SignUpEmail from "./SignUpEmail";
 function App() {
   return (
     <>
@@ -20,6 +21,8 @@ function App() {
         <Route path="/product" element={<ProductDetailsPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signUp" element={<SignUpPage />} />
+        <Route path="/signUp/phone" element={<SignUpPhone />} />
+        <Route path="/signUp/email" element={<SignUpEmail />} />
       </Routes>
       <TopButton />
       <CopylightFooter />
