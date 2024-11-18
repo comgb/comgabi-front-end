@@ -99,7 +99,7 @@ function ProductFilter() {
           )}
         />
       </div>
-      <button className="mt-4 py-1 px-3 text-white bg-green-500 rounded hover:bg-green-600 transition-colors duration-300 text-sm">
+      <button className="mt-4 py-1 px-3 text-white bg-blue-500 rounded hover:bg-green-600 transition-colors duration-300 text-sm">
         검색
       </button>
     </div>

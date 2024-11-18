@@ -31,7 +31,10 @@ function ProductDetailsPage() {
 
   return (
     <div className="relative flex flex-col items-center m-10">
-      <FloatingBox />
+      {/* FloatingBox 컴포넌트 */}
+      <div className="fixed top-10 right-5 z-50 hidden md:block">
+        <FloatingBox />
+      </div>
 
       {/* Section 1: Carousel, Product Name/Price, and Price Comparison */}
       <section className="w-full max-w-6xl flex items-start mb-12 space-x-6">
@@ -46,8 +49,8 @@ function ProductDetailsPage() {
           </div>
         </div>
 
-        {/* Price Comparison - Right with increased width */}
-        <div className="w-2/3 bg-gray-100 p-4 rounded-lg h-auto flex flex-col justify-start">
+        {/* Price Comparison - Right */}
+        <div className="w-2/3 bg-gray-400 p-4 rounded-lg h-auto flex flex-col justify-start">
           <h3 className="text-xl font-semibold mb-4 text-center">가격 비교</h3>
           <ul className="space-y-3">
             {priceComparisons.map((item) => (
@@ -82,32 +85,13 @@ function ProductDetailsPage() {
             ipsum dolor sit amet consectetur, adipisicing elit. A temporibus
             minus commodi, praesentium sequi mollitia expedita provident ducimus
             debitis est sapiente, animi reprehenderit aliquam! Ipsam, est!
-            Dolore Lorem ipsum dolor sit amet consectetur, adipisicing elit. A
-            temporibus minus commodi, praesentium sequi mollitia expedita
-            provident ducimus debitis est sapiente, animi reprehenderit aliquam!
-            Ipsam, est! Dolore Lorem ipsum dolor sit amet consectetur,
-            adipisicing elit. A temporibus minus commodi, praesentium sequi
-            mollitia expedita provident ducimus debitis est sapiente, animi
-            reprehenderit aliquam! Ipsam, est! Dolore Lorem ipsum dolor sit amet
-            consectetur, adipisicing elit. A temporibus minus commodi,
-            praesentium sequi mollitia expedita provident ducimus debitis est
-            sapiente, animi reprehenderit aliquam! Ipsam, est! Dolore Lorem
-            ipsum dolor sit amet consectetur, adipisicing elit. A temporibus
-            minus commodi, praesentium sequi mollitia expedita provident ducimus
-            debitis est sapiente, animi reprehenderit aliquam! Ipsam, est!
-            Dolore Lorem ipsum dolor sit amet consectetur, adipisicing elit. A
-            temporibus minus commodi, praesentium sequi mollitia expedita
-            provident ducimus debitis est sapiente, animi reprehenderit aliquam!
-            Ipsam, est! Dolore Lorem ipsum dolor sit amet consectetur,
-            adipisicing elit. A temporibus minus commodi, praesentium sequi
-            mollitia expedita provident ducimus debitis est sapiente, animi
-            reprehenderit aliquam! Ipsam, est! Dolore
+            Dolore
           </p>
         </div>
 
         {/* Product Details */}
         <div className="w-full bg-gray-400 p-8 rounded-lg">
-          <h1 className="text-center text-2xl font-semibold mb-6">
+          <h1 className="text-center text-2xl font-semibold mb-6 bg-base-100">
             제품 상세정보
           </h1>
           <div className="grid grid-cols-4 gap-6 md:grid-cols-2">
