@@ -89,62 +89,78 @@ function ProductDetailsPage() {
           </p>
         </div>
 
-        {/* Product Details */}
-        <div className="w-full bg-gray-400 p-8 rounded-lg">
-          <h1 className="text-center text-2xl font-semibold mb-6 bg-base-100">
-            제품 상세정보
-          </h1>
-          <div className="grid grid-cols-4 gap-6 md:grid-cols-2">
-            <div className="border border-gray-300 bg-gray-100 px-4 py-2 text-left text-lg">
-              제품번호
-            </div>
-            <div className="border border-gray-300 bg-white px-4 py-2 text-lg truncate">
-              12345678
-            </div>
-            <div className="border border-gray-300 bg-gray-100 px-4 py-2 text-left text-lg">
-              제조사
-            </div>
-            <div className="border border-gray-300 bg-white px-4 py-2 text-lg truncate">
-              삼성
-            </div>
-            <div className="border border-gray-300 bg-gray-100 px-4 py-2 text-left text-lg">
-              모델명
-            </div>
-            <div className="border border-gray-300 bg-white px-4 py-2 text-lg truncate">
-              GalaxyBook
-            </div>
-            <div className="border border-gray-300 bg-gray-100 px-4 py-2 text-left text-lg">
-              색상
-            </div>
-            <div className="border border-gray-300 bg-white px-4 py-2 text-lg truncate">
-              실버
-            </div>
-            <div className="border border-gray-300 bg-gray-100 px-4 py-2 text-left text-lg">
-              CPU
-            </div>
-            <div className="border border-gray-300 bg-white px-4 py-2 text-lg truncate">
-              Intel i7
-            </div>
-            <div className="border border-gray-300 bg-gray-100 px-4 py-2 text-left text-lg">
-              RAM
-            </div>
-            <div className="border border-gray-300 bg-white px-4 py-2 text-lg truncate">
-              16GB
-            </div>
-            <div className="border border-gray-300 bg-gray-100 px-4 py-2 text-left text-lg">
-              저장 용량
-            </div>
-            <div className="border border-gray-300 bg-white px-4 py-2 text-lg truncate">
-              512GB SSD
-            </div>
-            <div className="border border-gray-300 bg-gray-100 px-4 py-2 text-left text-lg">
-              배터리 수명
-            </div>
-            <div className="border border-gray-300 bg-white px-4 py-2 text-lg truncate">
-              최대 20시간
-            </div>
-          </div>
+        <div
+          colSpan="2"
+          className="text-2xl text-center font-bold mb-2 pb-2 border-b-2 border-black"
+        >
+          제품 상세정보
         </div>
+        <table className="w-full">
+          <tr>
+            <td className="border border-gray-300 bg-gray-100 px-4 py-2 text-left text-lg">
+              제품번호
+            </td>
+            <td className="border border-gray-300 bg-white px-4 py-2 text-lg truncate">
+              123456
+            </td>
+          </tr>
+          <tr>
+            <td className="border border-gray-300 bg-gray-100 px-4 py-2 text-left text-lg">
+              제조사
+            </td>
+            <td className="border border-gray-300 bg-white px-4 py-2 text-lg truncate">
+              삼성
+            </td>
+          </tr>
+          <tr>
+            <td className="border border-gray-300 bg-gray-100 px-4 py-2 text-left text-lg">
+              모델명
+            </td>
+            <td className="border border-gray-300 bg-white px-4 py-2 text-lg truncate">
+              갤럭시 북
+            </td>
+          </tr>
+          <tr>
+            <td className="border border-gray-300 bg-gray-100 px-4 py-2 text-left text-lg">
+              색상
+            </td>
+            <td className="border border-gray-300 bg-white px-4 py-2 text-lg truncate">
+              실버
+            </td>
+          </tr>
+          <tr>
+            <td className="border border-gray-300 bg-gray-100 px-4 py-2 text-left text-lg">
+              CPU
+            </td>
+            <td className="border border-gray-300 bg-white px-4 py-2 text-lg truncate">
+              Intel i7
+            </td>
+          </tr>
+          <tr>
+            <td className="border border-gray-300 bg-gray-100 px-4 py-2 text-left text-lg">
+              RAM
+            </td>
+            <td className="border border-gray-300 bg-white px-4 py-2 text-lg truncate">
+              16GB
+            </td>
+          </tr>
+          <tr>
+            <td className="border border-gray-300 bg-gray-100 px-4 py-2 text-left text-lg">
+              저장용량
+            </td>
+            <td className="border border-gray-300 bg-white px-4 py-2 text-lg truncate">
+              152GB SSD
+            </td>
+          </tr>
+          <tr>
+            <td className="border border-gray-300 bg-gray-100 px-4 py-2 text-left text-lg">
+              배터리 수명
+            </td>
+            <td className="border border-gray-300 bg-white px-4 py-2 text-lg truncate">
+              최대 20시간
+            </td>
+          </tr>
+        </table>
       </section>
     </div>
   );
