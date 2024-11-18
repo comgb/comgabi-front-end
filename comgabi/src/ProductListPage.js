@@ -19,7 +19,8 @@ function ProductListPage() {
 
           <hr className="w-full h-3 border-0" />
 
-          <tbody>
+          <tbody className="font-extrabold">
+            인기상품순
             <tr>
               <th
                 rowSpan="2"
