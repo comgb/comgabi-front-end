@@ -60,7 +60,7 @@ function LoginPage() {
         >
           비밀번호 찾기
         </div>
-        <Link to="/signUp" className="text-gray-400 mt-4 px-2">
+        <Link to="/sign_up" className="text-gray-400 mt-4 px-2">
           회원가입
         </Link>
       </div>
