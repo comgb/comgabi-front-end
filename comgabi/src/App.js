@@ -8,7 +8,8 @@ import ProductDetailsPage from "./ProductDetailsPage";
 import TopButton from "./TopButton";
 import LoginPage from "./LoginPage";
 import SignUpPage from "./SignUpPage";
-
+import SignUpPhone from "./SignUpPhone";
+import SignUpEmail from "./SignUpEmail";
 function App() {
   return (
     <>
@@ -19,7 +20,9 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/product" element={<ProductDetailsPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/signUp" element={<SignUpPage />} />
+        <Route path="/sign_up" element={<SignUpPage />} />
+        <Route path="/sign_up/phone" element={<SignUpPhone />} />
+        <Route path="/sign_up/email" element={<SignUpEmail />} />
       </Routes>
       <TopButton />
       <CopylightFooter />
