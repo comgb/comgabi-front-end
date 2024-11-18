@@ -20,9 +20,9 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/product" element={<ProductDetailsPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/signUp" element={<SignUpPage />} />
-        <Route path="/signUp/phone" element={<SignUpPhone />} />
-        <Route path="/signUp/email" element={<SignUpEmail />} />
+        <Route path="/sign_up" element={<SignUpPage />} />
+        <Route path="/sign_up/phone" element={<SignUpPhone />} />
+        <Route path="/sign_up/email" element={<SignUpEmail />} />
       </Routes>
       <TopButton />
       <CopylightFooter />

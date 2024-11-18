@@ -91,7 +91,7 @@ function HeaderMenuBar() {
                   로그인
                 </Link>
                 ⎟
-                <Link to="/signUp" className="underline hover:text-gray-900">
+                <Link to="/sign_up" className="underline hover:text-gray-900">
                   회원가입
                 </Link>
               </div>
@@ -110,7 +110,7 @@ function HeaderMenuBar() {
           }`}
         >
           <Link to="/login">로그인</Link>
-          <Link to="/signUp">회원가입</Link>
+          <Link to="/sign_up">회원가입</Link>
         </div>
       </header>
     </>
