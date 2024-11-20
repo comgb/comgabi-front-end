@@ -93,7 +93,7 @@ function Carousel({ images }) {
       {/* Carousel 이미지들 */}
       <div
         ref={carouselRef}
-        className="carousel carousel-center bg-neutral rounded-box max-w-md space-x-4 p-4 overflow-x-auto"
+        className="carousel carousel-center bg-neutral rounded-2xl max-w-md space-x-4 p-4 overflow-x-auto"
       >
         {images.map((image, index) => (
           <div className="carousel-item" id={`img${index + 1}`} key={index}>

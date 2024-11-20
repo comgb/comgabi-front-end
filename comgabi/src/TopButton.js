@@ -28,7 +28,7 @@ const TopButton = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-6 right-6 bg-blue-500 rounded-full w-12 h-12 p-3 z-50 transition-opacity duration-300 ${isVisible ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+      className={`fixed bottom-6 right-6 bg-primary rounded-full w-12 h-12 p-3 z-50 transition-opacity duration-300 ${isVisible ? "opacity-100" : "opacity-0 pointer-events-none"}`}
       style={{ display: isVisible ? "block" : "none" }}
     >
       <span class="material-symbols-outlined text-white">arrow_upward_alt</span>
