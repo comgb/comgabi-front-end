@@ -253,7 +253,7 @@ function ProductDetailsPage() {
         </section>
         {!isLaptop ? (
           <div className="w-[20%] ml-2 mr-2">
-            <div className="sticky top-32">
+            <div className="sticky top-20">
               <FloatingBox />
             </div>
           </div>
