@@ -55,24 +55,12 @@ const News = () => {
       <div className="p-6 border w-[30%] max-md:w-[100%] border-gray-300 rounded-lg">
         <h2 className="text-2xl font-bold mb-4">유튜브</h2>
         <div className="grid grid-rows-2 gap-6">
-          <iframe
-            className="aspect-video w-[100%]"
-            src="https://www.youtube.com/embed/NMjhjrBIrG8?si=nwbgH35T3h7gsYO5"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-          <iframe
-            className="aspect-video w-[100%]"
-            src="https://www.youtube.com/embed/NMjhjrBIrG8?si=nwbgH35T3h7gsYO5"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
+          <div className="aspect-video skeleton w-full content-center text-center">
+            현재 서비스 준비 중입니다.
+          </div>
+          <div className="aspect-video skeleton w-full content-center text-center">
+            현재 서비스 준비 중입니다.
+          </div>
         </div>
       </div>
     </article>

@@ -10,6 +10,8 @@ function HeaderMenuBar() {
     setIsOpen(!isOpen);
   };
 
+  const [showAlert, setShowAlert] = useState(false);
+
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 768px)");
 
@@ -79,11 +81,15 @@ function HeaderMenuBar() {
           </button>
         </form>
         <div className="ml-5 mr-5 flex items-center">
-          <Link to="/shopping-cart" className="flex items-center">
+          <button
+            className="flex items-center"
+            onClick={() => setShowAlert(true)}
+          >
             <span className="material-symbols-outlined text-base-content">
               shopping_cart
             </span>
-          </Link>
+          </button>
+
           <p className="ml-5 text-base-content flex items-center">
             {!isMobile ? (
               <div className="whitespace-nowrap">
@@ -113,6 +119,32 @@ function HeaderMenuBar() {
           <Link to="/sign_up">회원가입</Link>
         </div>
       </header>
+      <div className="fixed inset-0 flex items-center justify-center z-50 w-auto place-self-center">
+        {showAlert && (
+          <div role="alert" className="alert alert-info">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              className="h-6 w-6 shrink-0 stroke-current"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+            <span>현재 서비스 준비 중입니다.</span>
+            <button
+              className="btn btn-sm btn-ghost"
+              onClick={() => setShowAlert(false)}
+            >
+              닫기
+            </button>
+          </div>
+        )}
+      </div>
     </>
   );
 }
