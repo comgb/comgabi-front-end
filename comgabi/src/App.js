@@ -12,7 +12,6 @@ import SignUpPage from "./login/SignUpPage";
 import SignUpPhone from "./login/SignUpPhone";
 import SignUpEmail from "./login/SignUpEmail";
 function App() {
-
   const queryClient = new QueryClient();
 
   return (
@@ -20,7 +19,7 @@ function App() {
       <HeaderMenuBar />
       <CategoryMenu />
       <Routes>
-        <Route path="/productList" element={<ProductListPage />} />
+        <Route path="/product_list" element={<ProductListPage />} />
         <Route path="/" element={<MainPage />} />
         <Route path="/product" element={<ProductDetailsPage />} />
         <Route path="/login" element={<LoginPage />} />
